@@ -1,0 +1,208 @@
+/* ============================================
+   Google Font Import
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ============================================
+   3-Color Palette: dark, maroon, light (text)
+   ============================================ */
+:root {
+    --dark: #000000;
+    --maroon: #8b3a47;
+    --light: #e6e2dc;
+}
+
+/* ============================================
+   Global Reset & Typography
+   ============================================ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 2rem 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: color-mix(in srgb, var(--maroon) 22%, var(--dark));
+    color: var(--light);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Header
+   ============================================ */
+header {
+    background-color: color-mix(in srgb, var(--maroon) 55%, var(--dark));
+    color: var(--light);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 2px solid var(--maroon);
+    box-shadow: 0 4px 24px color-mix(in srgb, var(--maroon) 35%, transparent);
+}
+
+header h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+header .tagline {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* ============================================
+   Main & Profile Section
+   ============================================ */
+main {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+}
+
+.profile-section {
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================================
+   Profile Card
+   ============================================ */
+.profile-card {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    background-color: color-mix(in srgb, var(--maroon) 14%, var(--dark));
+    padding: 2rem;
+    border: 2px solid var(--maroon);
+    border-radius: 12px;
+    margin: 0;
+    box-shadow: 0 6px 28px color-mix(in srgb, var(--dark) 50%, transparent);
+}
+
+/* ============================================
+   Profile Image
+   ============================================ */
+.profile-image {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid var(--maroon);
+    padding: 4px;
+    background-color: color-mix(in srgb, var(--maroon) 30%, var(--dark));
+    flex-shrink: 0;
+}
+
+/* ============================================
+   Bio Info
+   ============================================ */
+.bio-info {
+    flex: 1;
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+.bio-info h2 {
+    margin: 0 0 1rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: color-mix(in srgb, var(--maroon) 45%, var(--light));
+}
+
+.bio-info .about {
+    margin: 0 0 1.5rem;
+    padding: 0 0 1rem;
+    border-bottom: 1px solid var(--maroon);
+    color: var(--light);
+    opacity: 0.88;
+}
+
+/* ============================================
+   Skills Section
+   ============================================ */
+.skills h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: color-mix(in srgb, var(--maroon) 45%, var(--light));
+}
+
+.skills ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skills li {
+    margin: 0.5rem 0;
+    padding: 0.65rem 1rem;
+    background-color: color-mix(in srgb, var(--maroon) 10%, var(--dark));
+    border: 1px solid color-mix(in srgb, var(--maroon) 50%, var(--dark));
+    border-radius: 8px;
+    border-left: 4px solid var(--maroon);
+    transition: background-color 0.25s ease, transform 0.2s ease, border-color 0.25s ease, color 0.25s ease;
+    cursor: default;
+}
+
+.skills li:hover {
+    background-color: color-mix(in srgb, var(--maroon) 65%, var(--dark));
+    color: var(--light);
+    border-color: var(--maroon);
+    transform: translateX(6px);
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+footer {
+    background-color: color-mix(in srgb, var(--maroon) 55%, var(--dark));
+    color: var(--light);
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    border: 2px solid var(--maroon);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   Responsive — Tablet & Mobile
+   ============================================ */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .bio-info,
+    .bio-info h2,
+    .bio-info .about,
+    .skills {
+        text-align: center;
+    }
+
+    .profile-image {
+        max-width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    .skills li:hover {
+        transform: translateY(-2px);
+    }
+}
